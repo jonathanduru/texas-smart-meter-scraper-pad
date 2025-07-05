@@ -1,18 +1,10 @@
-# CSV to JSON Transformation Script
-# Converts Smart Meter Texas CSV exports to structured JSON
-
-$folderPath = 'C:\Projects\Texas Smart Meter Reports'
-
-# Get the most recent CSV file
-$latestFile = Get-ChildItem -Path $folderPath -Filter '*.csv' | 
-    Sort-Object LastWriteTime -Descending | 
-    Select-Object -First 1
+$folderPath = "C:\Projects\Texas Smart Meter Reports"
+$latestFile = Get-ChildItem -Path $folderPath -Filter "*.csv" | Sort-Object LastWriteTime -Descending | Select-Object -First 1
 
 if ($latestFile) {
-    # Import CSV data
     $csvData = Import-Csv -Path $latestFile.FullName
     
-    # Transform to simplified structure
+    # Create simplified objects with just date and usage
     $simplifiedData = $csvData | ForEach-Object {
         [PSCustomObject]@{
             Date = $_.USAGE_DATE
@@ -22,15 +14,8 @@ if ($latestFile) {
         }
     }
     
-    # Convert to JSON
     $jsonOutput = $simplifiedData | ConvertTo-Json -Depth 10
-    
-    # Output JSON
     Write-Output $jsonOutput
-    
-    # Optionally save to file
-    # $jsonPath = $latestFile.FullName -replace '\.csv$', '.json'
-    # $jsonOutput | Out-File -FilePath $jsonPath -Encoding UTF8
 } else {
-    Write-Error 'No CSV files found in the specified directory'
+    Write-Output "ERROR: No CSV files found"
 }
