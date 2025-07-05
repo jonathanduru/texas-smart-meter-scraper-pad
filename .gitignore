@@ -45,3 +45,7 @@ logs/
 *.tmp
 *.temp
 ~$*
+
+# Claude context files
+CLAUDE.md
+SESSION_RESTART.md
