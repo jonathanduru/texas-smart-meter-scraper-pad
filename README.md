@@ -2,6 +2,24 @@
 
 An automated Power Automate Desktop solution that collects and analyzes monthly electricity usage data from Smart Meter Texas. The project demonstrates RPA capabilities combined with data processing and AI-powered analytics.
 
+## Technical Stack
+
+- **VMware Workstation** - Isolated virtual environment for secure automation
+- **Power Automate Desktop** - Orchestration and UI automation
+- **Python** - Dynamic date calculations
+- **PowerShell** - Data transformation and API integration
+- **OpenAI API** - Consumption pattern analysis
+- **Chrome WebDriver** - Browser automation
+
+## Key Features
+
+- **Isolated Execution**: Runs in VMware virtual machine for security and portability
+- **Dynamic Date Handling**: Automatically calculates rolling 30-day windows
+- **Error Resilience**: Built-in waits and file existence checks
+- **Secure Credential Management**: Environment variable storage for API keys
+- **Modular Design**: Reusable subflows for maintainability
+- **Data Pipeline**: CSV to JSON transformation with field mapping
+
 ---
 
 > **Flow Architecture**  
@@ -159,24 +177,6 @@ if ($latestFile) {
 **![GPT Analysis Output](images/gpt-analysis-output.png)**
 <!-- PLACEHOLDER: Screenshot of the PAD message box showing GPT analysis results
 Should show usage summary, patterns, and recommendations -->
-
-## Technical Stack
-
-- **VMware Workstation** - Isolated virtual environment for secure automation
-- **Power Automate Desktop** - Orchestration and UI automation
-- **Python** - Dynamic date calculations
-- **PowerShell** - Data transformation and API integration
-- **OpenAI API** - Consumption pattern analysis
-- **Chrome WebDriver** - Browser automation
-
-## Key Features
-
-- **Isolated Execution**: Runs in VMware virtual machine for security and portability
-- **Dynamic Date Handling**: Automatically calculates rolling 30-day windows
-- **Error Resilience**: Built-in waits and file existence checks
-- **Secure Credential Management**: Environment variable storage for API keys
-- **Modular Design**: Reusable subflows for maintainability
-- **Data Pipeline**: CSV to JSON transformation with field mapping
 
 ## Data Analysis Capabilities
 
