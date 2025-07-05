@@ -1,0 +1,47 @@
+# Personal data
+*.csv
+*.json
+*_analysis.txt
+
+# Exclude actual meter data
+Texas Smart Meter Reports/
+
+# API Keys and credentials
+.env
+config.json
+secrets.txt
+
+# Power Automate Desktop
+*.pad
+*.padbackup
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+venv/
+ENV/
+
+# PowerShell
+*.ps1xml
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+~$*
