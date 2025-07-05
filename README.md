@@ -199,11 +199,6 @@ The system analyzes:
 ```
 Texas-Smart-Meter-Scraper/
 ├── README.md                    # Project overview
-├── flows/
-│   ├── Main.txt               # Main Power Automate Desktop flow
-│   ├── ScrapeUsage.txt        # Web scraping subflow
-│   ├── ProcessFile.txt        # Data processing subflow
-│   └── GPT_Injection.txt      # AI analysis subflow
 ├── scripts/
 │   ├── calculate_dates.py     # Date range calculation logic
 │   ├── csv_to_json.ps1       # CSV transformation script
@@ -216,6 +211,5 @@ Texas-Smart-Meter-Scraper/
 
 ### Directory Guide
 
-- **`flows/`** - Power Automate Desktop flow documentation
 - **`scripts/`** - Standalone PowerShell and Python scripts used in the automation
 - **`images/`** - Visual documentation and demos
